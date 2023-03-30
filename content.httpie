@@ -1,0 +1,22 @@
+http -v PUT httpbin.org/put API-Key:foo hello=world
+// find all content
+http://localhost:8080/api/content
+
+// find content by id 
+GET : http://localhost:8080/api/content/1
+
+
+//add content
+POST : http://localhost:8080/api/content
+Content-Type : applcation/json
+
+{
+    "id": 2,
+    "title": "video",
+    "desc": "video to test",
+    "status": "IDEA",
+    "type": "VIDEO",
+    "dateCreated": "2023-03-19T18:17:56.1173434",
+    "dateUpdate": "2023-03-19T18:17:56.1203424",
+    "url": "http:www"
+}

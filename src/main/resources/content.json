@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "video",
+        "description": "video to test",
+        "status": "IDEA",
+        "type": "VIDEO",
+        "dateCreated": "2023-03-28T15:16:00.6238717",
+        "dateUpdate": "2023-03-28T15:16:00.6238717",
+        "url": "http:www"
+    },
+    {
+        "id": 5,
+        "title": "course",
+        "description": "course to test",
+        "status": "COMPLETED",
+        "type": "CONFERENCE_TALK",
+        "dateCreated": "2023-03-28T15:17:50.7197811",
+        "dateUpdate": "2023-03-28T15:17:50.7197811",
+        "url": "http:www"
+    },
+    {
+        "id": 8,
+        "title": "course",
+        "description": "course to test",
+        "status": "COMPLETED",
+        "type": "CONFERENCE_TALK",
+        "dateCreated": "2023-03-28T15:17:50.7197811",
+        "dateUpdate": "2023-03-28T15:17:50.7197811",
+        "url": "http:www"
+    },
+    {
+        "id": 6,
+        "title": "CONFERENCE_TALK",
+        "description": "CONFERENCE_TALK to test",
+        "status": "IN_PROGRESS",
+        "type": "CONFERENCE_TALK",
+        "dateCreated": "2023-03-28T15:17:50.7197811",
+        "dateUpdate": "2023-03-28T15:17:50.7197811",
+        "url": "http:www"
+    },
+    {
+        "id": 7,
+        "title": "ARTICLE",
+        "description": "ARTICLE to test",
+        "status": "COMPLETED",
+        "type": "ARTICLE",
+        "dateCreated": "2023-03-28T15:17:50.7197811",
+        "dateUpdate": "2023-03-28T15:17:50.7197811",
+        "url": "http:www"
+    }
+]
