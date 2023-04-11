@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import dev.frs.Contentcalender.Model.Content;
+import dev.frs.Contentcalender.Repository.ContentCollectionRepository;
 import dev.frs.Contentcalender.Repository.ContentRepository;
 
 @RestController
@@ -24,9 +25,9 @@ import dev.frs.Contentcalender.Repository.ContentRepository;
 public class ContentController {
 //to inject the repo with its methods inside to controller so it can be used
     @Autowired
-    private ContentRepository repository;
+    private ContentCollectionRepository repository;
    
-    public ContentController(ContentRepository repo){
+    public ContentController(ContentCollectionRepository repo){
        repo = this.repository;
 
     }
@@ -44,25 +45,25 @@ public class ContentController {
     public void create (@RequestBody Content content){
         repository.save(content);
     }
-    @PutMapping("/update/{id}")
-    public void update(@RequestBody Content content ,@PathVariable Integer id){
-        if(!repository.existsById(id)){
-            System.out.println("here in update function to execut the put http method");
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Content not found");
-        }
-       // repository.delete(getById(id));
-       Optional<Content> content1 = repository.findById(id);
-       content1.get().setStatus(content.getStatus());
-       content1.get().setTitle(content.getTitle());
-       content1.get().setType(content.getType());
-       content1.get().setDescription(content.getDescription());
-       content1.get().setUrl(content.getUrl());
-       content1.get().setDateUpdate(content.getDateUpdate());
-       content1.get().setDateCreated(content.getDateCreated());
+    // @PutMapping("/update/{id}")
+    // public void update(@RequestBody Content content ,@PathVariable Integer id){
+    //     if(!repository.existsById(id)){
+    //         System.out.println("here in update function to execut the put http method");
+    //         throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Content not found");
+    //     }
+    //    // repository.delete(getById(id));
+    //    Optional<Content> content1 = repository.findById(id);
+    //    content1.get().setStatus(content.getStatus());
+    //    content1.get().setTitle(content.getTitle());
+    //    content1.get().setType(content.getType());
+    //    content1.get().setDescription(content.getDescription());
+    //    content1.get().setUrl(content.getUrl());
+    //    content1.get().setDateUpdate(content.getDateUpdate());
+    //    content1.get().setDateCreated(content.getDateCreated());
 
-        repository.save(content1.get());
+    //     repository.save(content1.get());
 
-    }
+    // }
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable Integer id){
         repository.deleteById(id);

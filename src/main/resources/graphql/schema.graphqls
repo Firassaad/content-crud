@@ -1,0 +1,27 @@
+type Query{
+    AllContent : [Content]
+}
+
+type Content {
+    id: ID!
+    title: String
+    description: String
+    status: Status
+    type: Type
+    dateCreated: String
+    dateUpdate: String
+    url: String      
+}
+enum Status {
+    IDEA
+    IN_PROGRESS
+    COMPLETED
+    PUBLISHED
+}
+enum Type {
+    ARTICLE
+    VIDEO
+    COURSE
+    CONFERENCE_TALK
+    
+}
