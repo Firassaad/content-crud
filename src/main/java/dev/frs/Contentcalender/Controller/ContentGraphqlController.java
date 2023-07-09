@@ -23,7 +23,7 @@ public class ContentGraphqlController {
     // @QueryMapping
     @SchemaMapping(typeName = "Query", value = "AllContent")
     public List<Content> AllContent(){
-        System.out.println("test ------------------------+"+contentRepository.findAll().get(0).toString());
+        System.out.println(contentRepository.findAll().get(0).toString());
         return (List<Content>) contentRepository.findAll();
       
     }
